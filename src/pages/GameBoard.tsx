@@ -260,7 +260,7 @@ export function GameBoard() {
                   Carta
                 </th>
 
-                {board.players.map((player) => (
+                {board?.players?.map((player) => (
                   <th key={player.id} style={{ padding: '12px', border: '1px solid #ddd' }}>
                     {player.name}
                     {player.isMe && (
@@ -280,7 +280,7 @@ export function GameBoard() {
 
                   {/* SOLUÇÃO DO ALINHAMENTO DO QUADRO: 
                       Percorremos a ordem fixa dos jogadores (board.players) e procuramos a nota correta daquele jogador específica nesta carta */}
-                  {board.players.map((player) => {
+                  {board?.players?.map((player) => {
                     const playerNote = card.players.find((note) => note.playerId === player.id)
                     
                     return (
